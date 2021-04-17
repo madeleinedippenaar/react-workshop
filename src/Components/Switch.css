@@ -4,3 +4,8 @@
     text-align: center;
     margin: 10px auto;
 }
+
+.Switch--on {
+  background-color: blue;
+  color: white;
+}

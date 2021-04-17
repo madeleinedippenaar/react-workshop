@@ -1,13 +1,18 @@
+import { useState } from "react";
 import "./Switch.css"
 
 function Switch() {
+
+    const [on, setOn] = useState(false);
+    const stateClass = on ? "Switch--on" : "Switch--off"; 
+
     return (
-        <div className="Switch">
+        <div className={"Switch " + stateClass}>
             <h3>Switch</h3>
-            <p>OFF</p>
+            <p>{on ? "ON" : "OFF"}</p>
             <p>
-                <button type="button">On</button>
-                <button type="button">Off</button>
+                <button type="button" onClick={()=> setOn(true)}>On</button>
+                <button type="button" onClick={()=> setOn(false)}>Off</button>
             </p>
         </div>
     )
