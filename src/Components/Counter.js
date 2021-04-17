@@ -12,13 +12,18 @@ function Counter() {
         setCount(prevCount => prevCount + 1);
     }
 
+    let classes = "Counter";
+    if (count < 0)  {
+        classes += " negative"
+    }
+
     return (
-        <div className="Counter">
+        <div className={classes}>
             <h3>Counter</h3>
-            <p>{count}</p>
+            <p className="Counter__count">{count}</p>
             <p>
                 <button type="button" onClick={() => setCount(prev => prev - 1)}>Down</button>
-                <button type="button" onClick={handleReset}>Reset</button>
+                {count !== 0 && <button type="button" onClick={handleReset}>Reset</button>}
                 <button type="button" onClick={handleUp}>Up</button>
             </p>
         </div>
