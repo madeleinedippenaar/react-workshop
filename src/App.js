@@ -4,6 +4,7 @@ import Switch from "./Components/Switch"
 import Weather from "./Components/Weather"
 import Quotes from "./Components/Quotes"
 import QuoteList from "./Components/QuoteList";
+import ColorPicker from "./Components/ColorPicker";
 
 function App() {
   const weatherData = [
@@ -29,6 +30,7 @@ function App() {
    <Quotes author="Yoda" text="Do. Or do not. There is no try." date=" A long time ago" />
    <Quotes author="Bugs Bunny" text="What's up, Doc?" />
    <QuoteList/>
+   <ColorPicker/>
   </div>
   );
 }
